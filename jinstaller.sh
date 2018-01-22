@@ -83,8 +83,8 @@ jinstall () {
 	sed -i -e "s/db = \x27\x27/db = \x27$DB_NAME\x27/g" configuration.php-dist
 	sed -i -e "s/dbprefix = \x27jos_\x27/dbprefix = \x27$DB_PREFIX\x27/g" configuration.php-dist
 
-	sed -i -e "s/tmp_path = \x27\/tmp\x27/tmp_path = \x27html\/$FOLDER_NAME\/tmp\x27/g" configuration.php-dist
-	sed -i -e "s/log_path = \x27\/var\/logs\x27/log_path = \x27html\/$FOLDER_NAME\/administrator\/logs\x27/g" configuration.php-dist
+	sed -i -e "s/tmp_path = \x27\/tmp\x27/tmp_path = \x27\/html\/$FOLDER_NAME\/tmp\x27/g" configuration.php-dist
+	sed -i -e "s/log_path = \x27\/var\/logs\x27/log_path = \x27\/html\/$FOLDER_NAME\/administrator\/logs\x27/g" configuration.php-dist
 
 	# Place configuration.php
 	cp configuration.php-dist ${HOME}/$WEB_ROOT$FOLDER_NAME
